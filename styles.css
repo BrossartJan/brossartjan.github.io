@@ -1,0 +1,865 @@
+ /* Allgemeine Stile */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+}
+
+header .logo {
+    height: 50px;
+    margin-left: 20px; /* Abstand nach links */
+}
+
+
+/*Navigator design (nav) */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: #444;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    min-height: calc(100vh - 150px); /* 100% der Viewport-Höhe minus Footer-Höhe */
+    padding-bottom: 50px; /* Optional: Abstand zum Footer */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    /* position: fixed; entfernen */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Stile für die Highlights-Liste */
+.highlights ul {
+    margin-left: 0; /* Standard-Abstand entfernen */
+    padding-left: 0; /* Standard-Padding entfernen */
+    list-style-type: none; /* Aufzählungszeichen entfernen */
+}
+
+.highlights li {
+    margin: 10px 0; /* Abstand zwischen den Listenelementen */
+    font-size: 1.1em;
+    padding-left: 0; /* Abstand entfernen */
+    position: relative; /* Positionierung für benutzerdefinierte Aufzählungszeichen */
+}
+
+/* Allgemeine Stile für die Philosophie-Seite */
+.philosophie-intro {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.philosophie-intro h2 {
+    color: #007BFF;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.philosophie-intro p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.philosophie-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.saeule {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.saeule h3 {
+    color: #007BFF;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.saeule p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.philosophie-zitat {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-left: 5px solid #007BFF;
+}
+
+.philosophie-zitat blockquote {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Stile für die Trainer/Team:in-Detailseite */
+.trainer-details {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.trainer-info {
+    flex: 1;
+    text-align: center;
+}
+
+.trainer-bild {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.trainer-info h2 {
+    color: #007BFF;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.trainer-info .rolle {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.trainer-info .beschreibung {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.trainer-kurse {
+    flex: 1;
+}
+
+.trainer-kurus h3 {
+    color: #007BFF;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.trainer-kurse ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.trainer-kurse li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.termin-vereinbaren {
+    margin: 30px auto; /* Zentriert das Element horizontal */
+    width: 50%; /* Reduziert die Breite */
+    max-width: 600px; /* Begrenzung der maximalen Breite */
+    padding: 20px; /* Abstand innen */
+    background: #f9f9f9; /* Hintergrund */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Stellt sicher, dass padding zur Gesamtbreite zählt */
+}
+
+.form-group input,
+.form-group textarea {
+    width: calc(100% - 20px); /* Berechnung für Innenabstand */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Verhindert, dass das Padding die Breite sprengt */
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Stile für die Kurs-Übersicht */
+.kurs-uebersicht {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Spalten */
+    gap: 30px; /* Abstand zwischen den Kursen */
+    row-gap: 10px; /* Vertikaler Abstand bleibt unverändert */
+    margin-bottom: 30px;
+    max-width: 1000px; /* Begrenzt die Breite der gesamten Kurs-Übersicht */
+    margin: 0 auto; /* Zentriert die Kurs-Übersicht */
+}
+
+.kurs {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-height: 300px; /* Maximalhöhe, um zu verhindern, dass es zu groß wird */
+    overflow: hidden; /* Verhindert, dass Inhalte aus dem Container herausragen */
+}
+
+
+.kurs-inhalt {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund für den Text */
+    padding: 10px; /* Weniger Innenabstand */
+    border-radius: 10px;
+    width: 100%; /* Volle Breite des Kästchens */
+}
+
+.kurs h2 {
+    font-size: 1.2em; /* Kleinere Schriftgröße */
+    margin-bottom: 5px;
+}
+
+.kurs .beschreibung {
+    font-size: 0.9em; /* Kleinere Schriftgröße */
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 16px; /* Kleinere Schaltfläche */
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em; /* Kleinere Schriftgröße */
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* ---------------------------------------------------- Stile für die Überuns-Seite ----------------------------------------*/
+.team-intro {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.team-intro h2 {
+    color: #007BFF;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Über uns text */
+.team-intro p {
+    font-size: 1.1em;
+    width: 1000px;
+    line-height: 1.6;
+    text-align: center; /* Zentriert den Text */
+    margin: 0 auto; /* Zentriert das Element */
+    display: block; /* Stellt sicher, dass das p-Tag ein Block-Element ist */
+}
+
+.team-mitglieder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.mitglied {
+    display: flex;
+    align-items: center; /* Ausrichtung der Bilder und Texte */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px; /* Maximalbreite der Mitgliedseinträge */
+    margin-bottom: 20px;
+}
+
+.mitglied-bild {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px; /* Abstand zwischen Bild und Text */
+    position: relative;
+}
+
+.mitglied-bild .name-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Grau mit Transparenz */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.mitglied h3 {
+    color: #007BFF;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+.mitglied .rolle {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+    margin-left: 25px;
+}
+
+.mitglied .beschreibung {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-left: 25px;
+}
+
+
+
+/* ------------------------------------------------Spezifische Stile für die Impressum-Seite---------------------------- */
+body.impressum-seite {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+body.impressum-seite header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+body.impressum-seite header .logo {
+    height: 50px;
+}
+
+body.impressum-seite nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #444; /* Hintergrundfarbe für die Navigation */
+}
+
+body.impressum-seite nav ul li {
+    margin: 0 15px;
+}
+
+body.impressum-seite nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+body.impressum-seite nav ul li a:hover {
+    background: #555; /* Hover-Effekt für die Links */
+}
+
+body.impressum-seite main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+body.impressum-seite h1 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+body.impressum-seite h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+body.impressum-seite p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+body.impressum-seite footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body.impressum-seite nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body.impressum-seite nav ul li {
+        margin: 10px 0;
+    }
+
+    body.impressum-seite main {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    body.impressum-seite h1 {
+        font-size: 2em;
+    }
+
+    body.impressum-seite h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Allgemeines Layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+header img.logo {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Galerie */
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 20px; /* Abstand zwischen den Bildern */
+}
+
+.image-container {
+    position: relative;
+    width: 30%; /* Definiert eine Breite für jedes Bild */
+    height: 300px; /* Setzt eine feste Höhe */
+    overflow: hidden; /* Verhindert, dass der Text über das Bild hinausragt */
+    border-radius: 10px; /* Abgerundete Ecken */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%; /* Die Höhe wird auf die Containerhöhe gesetzt */
+    object-fit: cover; /* Verhindert Verzerrung und stellt sicher, dass das Bild den Container ausfüllt */
+    display: block;
+    border-radius: 10px; /* Abgerundete Ecken */
+}
+
+
+.text-box {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Dunklerer Hintergrund für bessere Lesbarkeit */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 0; /* Start ist unsichtbar */
+    transition: opacity 1s ease-in-out;
+}
+
+.text-box h2 {
+    margin-top: 0;
+    font-size: 1.2em; /* Kleinere Schriftgröße */
+}
+
+.text-box p {
+    margin-bottom: 0;
+    font-size: 0.9em; /* Kleinere Schriftgröße */
+}
+
+/* Animation für das Einblenden der Textboxen */
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInLeft 1s forwards;
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Button Container */
+.button-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+/* Animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Effekt für das Einblenden der Textboxen */
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInLeft 1s forwards;
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Entferne fixed, damit der Footer nicht die Kurse überdeckt */
+    width: 100%;
+    margin-top: 50px; /* Platz zwischen Inhalt und Footer */
+}
+
+
+
+
+/* Header - Logo und Überschrift mittig ausrichten ---------------------------------- */
+header {
+    display: flex;
+    justify-content: center;  /* Mittig ausrichten */
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+header h1 {
+    margin: 0;  /* Verhindert zusätzliches Abstand */
+}
+
+/* Logo */
+header img.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+/* Header - Logo und Überschrift mittig ausrichten ---------------------------------- */
+
+
+
+
+/* Galerie Überschriften */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+
+/* Verhindert horizontales Scrollen */
+html, body {
+    overflow-x: hidden; /* Versteckt horizontales Scrollen */
+    max-width: 100%; /* Begrenzt die Breite auf den Viewport */
+}
+
+/* Stellt sicher, dass alle Elemente innerhalb der Viewport-Breite bleiben */
+header, main, footer {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.rounded-box {
+    border-radius: 10px;
+}
+
+.shadow-box {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Allgemeine Stile */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Diese Stile gelten nur auf der oeffnungszeiten.html Seite */
+.oeffnungszeiten-page {
+    background-color: #f4f4f4;
+}
+
+/* Header */
+.oeffnungszeiten-page header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.oeffnungszeiten-page header h1 {
+    margin: 0;
+}
+
+.oeffnungszeiten-page header img.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+/* Navigation */
+.oeffnungszeiten-page nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: #444;
+}
+
+.oeffnungszeiten-page nav ul li {
+    margin: 0 15px;
+}
+
+.oeffnungszeiten-page nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.oeffnungszeiten-page nav ul li a:hover {
+    background: #555;
+}
+
+/* Main Content */
+.oeffnungszeiten-page main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.oeffnungszeiten-page .container {
+    padding: 20px;
+}
+
+/* Überschriften */
+.oeffnungszeiten-page h1, .oeffnungszeiten-page h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Öffnungszeiten & Ferienzeiten */
+.oeffnungszeiten-page .zeiten-liste {
+    margin: 10px 0;
+}
+
+.oeffnungszeiten-page .tag {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #333;
+}
+
+.oeffnungszeiten-page .tag-name {
+    font-weight: bold;
+}
+
+.oeffnungszeiten-page .tag-time {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Anfahrt */
+.oeffnungszeiten-page .anfahrt img.karte {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Footer */
+.oeffnungszeiten-page footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+

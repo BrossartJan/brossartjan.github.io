@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross-Training Gym - Startseite</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .fullscreen-image {
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text-box {
+            background-color: rgba(0, 0, 0, 01.1em);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .text-box.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="bilder/gym logo.jpg" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="kurse.html">Kurse</a></li>
+                <li><a href="oeffnungszeiten.html">Öffnungszeiten</a></li>
+                <li><a href="termin.html">Termin vereinbaren</a></li>
+                <li><a href="überuns.html">Über uns</a></li>
+                <li><a href="philosophie.html">Philosophie</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hauptinhalt -->
+    <main>
+        <h1>Willkommen im Cross-Training Gym!</h1>
+        <p>Entdecke unser vielfältiges Angebot an Kursen und Trainingsmöglichkeiten.</p>
+
+        <!-- Gallerie mit animierten Textboxen -->
+        <section class="gallery">
+            <div class="fullscreen-image" style="background-image: url('bilder/raum2.png');">
+                <div class="text-box">
+                    <h2>🏋️‍♂️ Modernste Trainingsgeräte</h2>
+                    <p>Erlebe das beste Equipment für Kraft, Ausdauer und Functional Training.</p>
+                </div>
+            </div>
+        
+            <div class="fullscreen-image" style="background-image: url('bilder/raum5.jpg');">
+                <div class="text-box">
+                    <h2>🧘‍♂️ Vielfältige Kursangebote</h2>
+                    <p>Von High-Intensity bis Yoga – hier findest du deinen perfekten Kurs.</p>
+                </div>
+            </div>
+        
+            <div class="fullscreen-image" style="background-image: url('bilder/Personaltraining.png');">
+                <div class="text-box">
+                    <h2>👥 Persönliche Betreuung</h2>
+                    <p>Unsere Trainer helfen dir, das Beste aus deinem Workout herauszuholen.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Button zu den Kursen -->
+        <div class="button-container">
+            <a href="kurse.html" class="button">Zu den Kursen</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Cross-Training Gym | Jan Brossart, Matrikelnummer: 3019744</p>
+    </footer>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            const textBoxes = document.querySelectorAll('.text-box');
+            textBoxes.forEach(box => {
+                const boxTop = box.getBoundingClientRect().top;
+                const boxBottom = box.getBoundingClientRect().bottom;
+                if (boxTop < window.innerHeight && boxBottom > 0) {
+                    box.classList.add('visible');
+                } else {
+                    box.classList.remove('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
